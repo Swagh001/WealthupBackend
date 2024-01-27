@@ -6,6 +6,10 @@ const cors=require("cors");
 const app=express();
 app.use(cors());
 
+app.get("/",(req,res)=>{
+    res.send("done");
+})
+
 app.get("/api/codes",async(req,res)=>{
     try{
         let Alldata=await DataModel.find();
